@@ -18,9 +18,11 @@ namespace Covid_API
             _client = new RestClient(CovidConfigReader.BaseUrl);
         }
 
-        public string GetLatestCovidResults()
+
+
+        public string GetLatestCovidResults(string country)
         {
-            var request = new RestRequest("");
+            var request = new RestRequest(country);
             var response = _client.Execute(request, Method.GET);
             return response.Content;
         }

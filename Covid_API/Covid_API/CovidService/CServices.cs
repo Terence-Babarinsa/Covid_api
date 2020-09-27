@@ -15,7 +15,7 @@ namespace Covid_API
     {
         //instance of call manager that manages call to API
         public CovidDataCallManager CovidDataCallManager { get; set; } = new CovidDataCallManager();
-        
+
         //deserialiser that transform data into format for model
         public CovidDTO CovidDTO { get; set; } = new CovidDTO();
 
@@ -25,11 +25,11 @@ namespace Covid_API
         //data converted into a JObject
         public JArray json_data { get; set; }
 
-        public CServices()
+        public CServices(string country)
         {
             //stores string from Api call made by CovidDataCallManager
-            RecentData = CovidDataCallManager.GetLatestCovidResults();
-       
+            RecentData = CovidDataCallManager.GetLatestCovidResults(country);
+
             json_data = JsonConvert.DeserializeObject<JArray>(RecentData);
         }
 
@@ -38,5 +38,9 @@ namespace Covid_API
             var count = json_data["cdata"].Count();
             return count;
         }
+
+
+
+
     }
 }
