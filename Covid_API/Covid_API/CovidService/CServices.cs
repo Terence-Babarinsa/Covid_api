@@ -23,14 +23,14 @@ namespace Covid_API
         public string RecentData { get; set; }
 
         //data converted into a JObject
-        public JObject json_data { get; set; }
+        public JArray json_data { get; set; }
 
         public CServices()
         {
             //stores string from Api call made by CovidDataCallManager
             RecentData = CovidDataCallManager.GetLatestCovidResults();
        
-            json_data = JsonConvert.DeserializeObject<JObject>(RecentData);
+            json_data = JsonConvert.DeserializeObject<JArray>(RecentData);
         }
 
         public int CovidDataCount()

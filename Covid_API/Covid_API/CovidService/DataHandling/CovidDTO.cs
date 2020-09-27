@@ -9,11 +9,11 @@ namespace Covid_API.CovidService.DataHandling
 {
     public class CovidDTO
     {
-        CovidModel CovidModel { get; set; }
+        public Rootobject CovidModel { get; set; }
 
         public void DeserialiseCovidData(string latestCovidData)
         {
-            CovidModel = JsonConvert.DeserializeObject<CovidModel>(latestCovidData);
+            CovidModel = JsonConvert.DeserializeObject<Rootobject>(latestCovidData);
         }
     }
 }
