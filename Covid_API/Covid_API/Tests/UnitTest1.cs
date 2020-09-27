@@ -27,7 +27,7 @@ namespace Covid_API
         }
 
         [Test]
-        public void CheckCountryCode2()
+        public void CheckCountryCodePortugal()
         {
             Assert.That(CovidPortugal.json_data[0]["CountryCode"].ToString(), Is.EqualTo("PT"));
         }
@@ -42,7 +42,33 @@ namespace Covid_API
         {
             Assert.That(CovidDataGlobal.CovidDTO.CovidModel.Countries.Where(c => c.CountryCode == "GB").First().CountryCode, Is.EqualTo("GB"));
         }
+        [Test]
+        public void CheckUKName()
+        {
+            Assert.That(CovidDataGlobal.CovidDTO.CovidModel.Countries.Where(c => c.CountryCode == "GB").First().Slug, Is.EqualTo("united-kingdom"));
+        }
 
+        [Test]
+        public void CheckUpdated()
+        {
+            Assert.That(int.Parse(CovidPortugal.json_data[90]["Confirmed"].ToString()), Is.LessThan(int.Parse(CovidPortugal.json_data[91]["Confirmed"].ToString())));
+        }
+
+        [Test]
+        public void CheckTotalCasesUK()
+        {
+            Assert.That(CovidDataGlobal.CovidDTO.CovidModel.Countries.Where(c => c.CountryCode == "GB").First().TotalConfirmed, Is.LessThan(500000));
+        }
+        [Test]
+
+        public void CheckDateOfUpdateIsToday()
+        {
+            var date = DateTime.Now.ToString("d/MM/yyyy");
+
+            Assert.That(CovidDataGlobal.CovidDTO.CovidModel.Countries.Where(c => c.CountryCode == "GB").First().Date.ToString().Contains(date));
+
+
+        }
     }
 
 

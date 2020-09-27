@@ -27,7 +27,7 @@ namespace Covid_API
 
     public class Country
     {
-        public string Country1 { get; set; }
+        public string CountryName { get; set; }
         public string CountryCode { get; set; }
         public string Slug { get; set; }
         public int NewConfirmed { get; set; }

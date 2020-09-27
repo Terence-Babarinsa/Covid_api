@@ -33,7 +33,7 @@ namespace Covid_API
 
 
 
-            //CovidDTO.DeserialiseCovidData(RecentData);
+
 
             json_data = JsonConvert.DeserializeObject<JArray>(RecentData);
         }
