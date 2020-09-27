@@ -22,9 +22,16 @@ namespace Covid_API
 
         public string GetLatestCovidResults(string country)
         {
-            var request = new RestRequest(country);
+            var request = new RestRequest("country/" + country);
             var response = _client.Execute(request, Method.GET);
             return response.Content;
         }
+        public string GetLatestCovidResults()
+        {
+            var request = new RestRequest("summary");
+            var response = _client.Execute(request, Method.GET);
+            return response.Content;
+        }
+
     }
 }

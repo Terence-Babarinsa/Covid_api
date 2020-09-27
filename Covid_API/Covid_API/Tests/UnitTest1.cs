@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using NUnit.Framework;
 
 namespace Covid_API
@@ -7,8 +8,12 @@ namespace Covid_API
     public class CovidDataTest
     {
 
+
         private CServices CovidData = new CServices("united-kingdom");
         private CServices CovidPortugal = new CServices("portugal");
+        private CServices CovidDataGlobal = new CServices();
+
+
         [Test]
         public void CheckCorrectCountry()
         {
@@ -20,12 +25,28 @@ namespace Covid_API
         {
             Assert.That(CovidData.json_data[0]["CountryCode"].ToString(), Is.EqualTo("GB"));
         }
+
         [Test]
         public void CheckCountryCode2()
         {
             Assert.That(CovidPortugal.json_data[0]["CountryCode"].ToString(), Is.EqualTo("PT"));
         }
 
+        [Test]
+        public void CheckGlobal()
+        {
+            Assert.That(CovidDataGlobal.CovidDTO.CovidModel.Message, Is.EqualTo(""));
+        }
+        [Test]
+        public void CheckUKCode()
+        {
+            Assert.That(CovidDataGlobal.CovidDTO.CovidModel.Countries.Where(c => c.CountryCode == "GB").First().CountryCode, Is.EqualTo("GB"));
+        }
+
     }
 
+
 }
+
+
+

@@ -24,20 +24,32 @@ namespace Covid_API
 
         //data converted into a JObject
         public JArray json_data { get; set; }
+        public JObject json_object { get; set; }
 
         public CServices(string country)
         {
             //stores string from Api call made by CovidDataCallManager
             RecentData = CovidDataCallManager.GetLatestCovidResults(country);
 
+
+
+            //CovidDTO.DeserialiseCovidData(RecentData);
+
             json_data = JsonConvert.DeserializeObject<JArray>(RecentData);
         }
-
-        public int CovidDataCount()
+        public CServices()
         {
-            var count = json_data["cdata"].Count();
-            return count;
+            //stores string from Api call made by CovidDataCallManager
+            RecentData = CovidDataCallManager.GetLatestCovidResults();
+
+
+
+            CovidDTO.DeserialiseCovidData(RecentData);
+
+            json_object = JsonConvert.DeserializeObject<JObject>(RecentData);
         }
+
+
 
 
 

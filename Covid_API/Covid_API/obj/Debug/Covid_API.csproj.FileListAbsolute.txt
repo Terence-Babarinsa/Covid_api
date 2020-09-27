@@ -25,6 +25,7 @@ C:\Users\Terence\source\repos\Covid_API\Covid_API\obj\Debug\Covid_API.csproj.Cor
 C:\Users\Terence\source\repos\Covid_API\Covid_API\obj\Debug\Covid_API.csproj.CopyComplete
 C:\Users\Terence\source\repos\Covid_API\Covid_API\obj\Debug\Covid_API.dll
 C:\Users\Terence\source\repos\Covid_API\Covid_API\obj\Debug\Covid_API.pdb
+
 C:\Users\Diogo\Documents\GitHub\Covid_api\Covid_API\Covid_API\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\Diogo\Documents\GitHub\Covid_api\Covid_API\Covid_API\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\Diogo\Documents\GitHub\Covid_api\Covid_API\Covid_API\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -52,3 +53,4 @@ C:\Users\Diogo\Documents\GitHub\Covid_api\Covid_API\Covid_API\obj\Debug\Covid_AP
 C:\Users\Diogo\Documents\GitHub\Covid_api\Covid_API\Covid_API\obj\Debug\Covid_API.csproj.CopyComplete
 C:\Users\Diogo\Documents\GitHub\Covid_api\Covid_API\Covid_API\obj\Debug\Covid_API.dll
 C:\Users\Diogo\Documents\GitHub\Covid_api\Covid_API\Covid_API\obj\Debug\Covid_API.pdb
+
