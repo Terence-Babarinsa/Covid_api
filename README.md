@@ -114,4 +114,4 @@ As a result, we were then able to instantiate our service class using different 
 
 In conclusion, with this framework we were able to create a range of NUnit tests to confirm the API response and to confirm that the information was being deserialized into our data model.
 
-![image-20200928091028423](C:\Users\Diogo\AppData\Roaming\Typora\typora-user-images\image-20200928091028423.png)
+![image-20200928091028423](https://github.com/Terence-Babarinsa/Covid_api/blob/diogo/Images/tests.PNG)
