@@ -42,8 +42,6 @@ namespace Covid_API
             //stores string from Api call made by CovidDataCallManager
             RecentData = CovidDataCallManager.GetLatestCovidResults();
 
-
-
             CovidDTO.DeserialiseCovidData(RecentData);
 
             json_object = JsonConvert.DeserializeObject<JObject>(RecentData);
