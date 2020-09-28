@@ -50,7 +50,7 @@ As the majority of our errors were encountered in the first sprint, our second a
 
 ###### Class Diagram
 
-<img src="C:\Users\Diogo\Downloads\Capture (1).png" alt="Capture (1)" style="zoom:80%;" />
+<img src="https://github.com/Terence-Babarinsa/Covid_api/blob/diogo/Images/Capture%20(1).png" style="zoom:80%;" />
 
 
 
